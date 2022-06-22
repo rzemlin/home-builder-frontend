@@ -1,7 +1,16 @@
 import React from 'react';
 
 
-export default function Home() {
-    return 
-    <div>ok home page</div>
-  }
+const Home = () => {
+  return (
+    <header>
+      <h1>
+        <span className="logo">{"//"}</span>
+        Home Page
+      </h1>
+      <button>Dark Mode</button>
+    </header>
+  );
+}
+
+export default Home;
