@@ -30,7 +30,7 @@ export const getRoom = (id) => {
     );
 }
 
-export const deleteProject = (id) => {
+export const deleteRoom = (id) => {
     return (dispatch) => {
         return fetch(`http://localhost:4000/api/v1/rooms/${id}`, {
              method: 'DELETE' })
@@ -39,14 +39,14 @@ export const deleteProject = (id) => {
     }
 }
 
-export const addPlan = (description, roomId) => {
+export const addPlan = (description, planId) => {
     return (dispatch) => {
         return fetch('http://localhost:4000/api/v1/plans', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ description: description, room_id: roomId
+            body: JSON.stringify({ description: description, room_id: planId
             })
         })
         .then((res) => res.json())

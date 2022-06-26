@@ -7,30 +7,30 @@ const reducer = (state = {
     switch (action.type) {
         case "GET_ROOMS":
             return {...state, 
-            projects: action.payload }
+            rooms: action.payload }
 
         case "GET_ROOM":
             return {...state,
-                selectedProject: action.payload}
+                chosenRoom: action.payload}
         
 
         case "ADD_ROOMS":
             return {...state,
-                projects: [...state.projects, action.payload ]
+                rooms: [...state.rooms, action.payload ]
             }
 
         case "DELETE_ROOM":
             return {...state,
-            projects: action.payload
+            rooms: action.payload
             }
 
         case "ADD_PLAN":
             const newPlan = {description: action.payload.description, id: action.payload.id, to_dos: []}
             return {...state,
-                selectedProject: {
-                    ...state.selectedProject,
-                    goals: [
-                        ...state.selectedProject.goals.concat(newPlan)
+                chosenRoom: {
+                    ...state.chosenRoom,
+                    plans: [
+                        ...state.chosenRoom.plans.concat(newPlan)
                     ]
                 }               
             }
@@ -38,11 +38,11 @@ const reducer = (state = {
         case "ADD_TODO":
             console.log("payload: ", action.payload)
             const newTodo = {description: action.payload.description, id: action.payload.id}
-            const thisPlan = state.selectedRoom.plans.find(plan => plan.id === action.payload.goal.id)
+            const thisPlan = state.chosenRoom.plans.find(plan => plan.id === action.payload.plan.id)
             return {...state,
-                selectedRoom: {
-                    ...state.selectedRoom,
-                        plans: state.selectedRoom.plans.map(plan => {
+                chosenRoom: {
+                    ...state.chosenRoom,
+                        plans: state.chosenRoom.plans.map(plan => {
                             if(plan.id !== thisPlan.id) {
                                 return plan 
                             } else {
