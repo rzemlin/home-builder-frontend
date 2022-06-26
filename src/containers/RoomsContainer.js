@@ -8,11 +8,10 @@ export class RoomsContainer extends Component {
  
     componentDidMount() {
         this.props.fetchRooms();
-         console.log(this.props.rooms);
     }
 
     render() {
-        console.log(this.props.rooms)
+        //console.log(this.props)
         return <div className='card'>
             <RoomsIndex rooms={this.props.rooms} deleteroom={this.props.deleteRoom} />
             <RoomsForm addRoom={this.props.addRoom} />
