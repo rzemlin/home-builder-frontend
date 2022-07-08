@@ -39,18 +39,17 @@ export const deleteRoom = (id) => {
     }
 }
 
-export const addPlan = (description, planId) => {
+export const addPlan = (description, roomId) => {
     return (dispatch) => {
         return fetch('http://localhost:4000/api/v1/plans', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ description: description, room_id: planId
+            body: JSON.stringify({ description: description, room_id: roomId
             })
         })
         .then((res) => res.json())
-        // .then(payload => console.log('goal action: ', payload))
         .then(payload => dispatch({type: "ADD_PLAN", payload: payload}))
     }
 }

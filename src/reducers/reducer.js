@@ -14,7 +14,7 @@ const reducer = (state = {
                 chosenRoom: action.payload}
         
 
-        case "ADD_ROOMS":
+        case "ADD_ROOM":
             return {...state,
                 rooms: [...state.rooms, action.payload ]
             }
