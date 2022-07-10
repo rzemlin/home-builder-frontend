@@ -5,28 +5,27 @@ import RoomsForm from '../components/RoomsForm';
 import { fetchRooms, addRoom, deleteRoom } from '../actions/roomActions';
 
 export class RoomsContainer extends Component {
- 
+
     componentDidMount() {
         this.props.fetchRooms();
+        // console.log(this.props.projects);
         //debugger
-        console.log("component mounted with props")
     }
 
     render() {
-        //const { isFetching } = this.state
-        console.log(this.props.data.rooms)
+        console.log(this.props.rooms)
         //debugger
         return <div className='card'>
-            <RoomsIndex rooms={this.props.rooms} deleteroom={this.props.deleteRoom} />
+            <RoomsIndex rooms={this.props.rooms} deleteRoom={this.props.deleteRoom} />
             <RoomsForm addRoom={this.props.addRoom} />
         </div>;
     }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return {
         rooms: state.rooms,
-    };
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
