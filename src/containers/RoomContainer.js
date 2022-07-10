@@ -14,7 +14,7 @@ class RoomContainer extends Component {
 
     render() {
         // debugger;
-        console.log(this.props.chosenRoom)
+        //console.log(this.props.chosenRoom)
         return <div className='card'>
             <RoomShowPage chosenRoom={this.props.chosenRoom} addTodo={this.props.addTodo}/>
             <PlansIndex room={this.props.chosenRoom} plans={this.props.plans} addTodo={this.props.addTodo} />

@@ -1,6 +1,6 @@
 const reducer = (state = {
     rooms: [],
-    selectedRoom: {},
+    chosenRoom: {},
     comments: [],
     requesting: false
 }, action) => {

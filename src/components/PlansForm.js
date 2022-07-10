@@ -25,7 +25,7 @@ class PlansForm extends Component {
     //debugger
 
   render() {
- debugger;
+ //debugger;
     return <form onSubmit={(e) => this.handleOnSubmit(e)}>
         <label><b>Let's add a Plan: </b>
             <input type='text' onChange={ (e) => this.handleChange(e)} />

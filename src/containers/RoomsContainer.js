@@ -13,7 +13,7 @@ export class RoomsContainer extends Component {
     }
 
     render() {
-        console.log(this.props.rooms)
+        console.log(this.props.rooms, "in rooms container")
         //debugger
         return <div className='card'>
             <RoomsIndex rooms={this.props.rooms} deleteRoom={this.props.deleteRoom} />
