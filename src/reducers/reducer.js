@@ -59,4 +59,4 @@ const reducer = (state = {
     }
 }
 
-export default reducer
+export default reducer;

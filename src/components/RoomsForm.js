@@ -18,7 +18,7 @@ class RoomsForm extends Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault();
-        this.props.addRoom(this.state.project);
+        this.props.addRoom(this.state.room);
         e.target.reset();
     }
     

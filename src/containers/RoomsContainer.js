@@ -9,11 +9,12 @@ export class RoomsContainer extends Component {
     componentDidMount() {
         this.props.fetchRooms();
         //debugger
-        console.log(this.props.rooms)
+        console.log("component mounted with props")
     }
 
     render() {
-        console.log(this.props.rooms)
+        //const { isFetching } = this.state
+        console.log(this.props.data.rooms)
         //debugger
         return <div className='card'>
             <RoomsIndex rooms={this.props.rooms} deleteroom={this.props.deleteRoom} />
@@ -22,10 +23,10 @@ export class RoomsContainer extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
     return {
         rooms: state.rooms,
-    }
+    };
 }
 
 const mapDispatchToProps = (dispatch) => {
