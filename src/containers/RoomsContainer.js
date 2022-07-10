@@ -14,6 +14,7 @@ export class RoomsContainer extends Component {
 
     render() {
         console.log(this.props.rooms, "in rooms container")
+        console.log(this.props)
         //debugger
         return <div className='card'>
             <RoomsIndex rooms={this.props.rooms} deleteRoom={this.props.deleteRoom} />

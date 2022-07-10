@@ -20,11 +20,12 @@ class PlansForm extends Component {
         const roomId = this.props.chosenRoom.id;
         this.props.addPlan(this.state.plan, roomId);
         e.target.reset();
-        debugger
+        //debugger
       }
     //debugger
 
   render() {
+    console.log("in plan form")
  //debugger;
     return <form onSubmit={(e) => this.handleOnSubmit(e)}>
         <label><b>Let's add a Plan: </b>

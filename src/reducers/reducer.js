@@ -25,7 +25,7 @@ const reducer = (state = {
             }
 
         case "ADD_PLAN":
-            const newPlan = {description: action.payload.description, id: action.payload.id, to_dos: []}
+            const newPlan = {description: action.payload.description, id: action.payload.id, todos: []}
             return {...state,
                 chosenRoom: {
                     ...state.chosenRoom,
@@ -36,7 +36,7 @@ const reducer = (state = {
             }
         
         case "ADD_TODO":
-            console.log("payload: ", action.payload)
+            //console.log("in reducer payload: ", action.payload)
             const newTodo = {description: action.payload.description, id: action.payload.id}
             const thisPlan = state.chosenRoom.plans.find(plan => plan.id === action.payload.plan.id)
             return {...state,
@@ -48,7 +48,7 @@ const reducer = (state = {
                             } else {
                             return {
                                 ...plan,
-                                todos: plan.todo.concat(newTodo)
+                                todos: plan.todos.concat(newTodo)
                             }}
                         })                            
                 }

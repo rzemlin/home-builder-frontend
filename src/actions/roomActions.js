@@ -56,7 +56,7 @@ export const addPlan = (description, roomId) => {
 
 export const addTodo = (description, planId) => {
     return (dispatch) => {
-        console.log('addtodo', description, planId)
+       // console.log('addtodo', description, planId)
         return fetch('http://localhost:4000/api/v1/todos', {
             method: 'POST',
             headers: {
@@ -66,7 +66,7 @@ export const addTodo = (description, planId) => {
             })
         })
         .then((res) => res.json())
-         .then(payload => console.log('goal action: ', payload))
+        // .then(payload => console.log('returned action payload', payload))
         .then(payload => dispatch({type: "ADD_TODO", payload: payload}))
     }
 }

@@ -7,7 +7,7 @@ function PlansIndex(props) {
       {props.plans?.map((plan) => (
         <div key={plan.id}><h3>{plan.description}</h3>
         <ul>{plan.todos?.map(todo => (<li key={todo.id}>{todo.description}</li>))}</ul>
-        <TodoForm plan={plan} addTodo={props.addPlan}/>
+        <TodoForm plan={plan} addTodo={props.addTodo}/>
         </div>))}
       </div>
 }
