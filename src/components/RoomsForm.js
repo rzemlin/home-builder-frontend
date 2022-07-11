@@ -26,9 +26,9 @@ class RoomsForm extends Component {
   render() {
     console.log("in rooms form")
     return <form onSubmit={(e) => this.handleOnSubmit(e)}>
-        <label><b>Add a Room: </b>
+        <label><b>Add a New Room Checklist: </b>
             <input type='text' onChange={ (e) => this.handleChange(e)} />
-            <input type='submit' value='Create A New Room' />
+            <input type='submit' className='button' value='Create It' />
         </label>
     </form>;
   }

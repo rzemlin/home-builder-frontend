@@ -9,7 +9,7 @@ const RoomsIndex = (props) => {
                 <Link to={`/rooms/${room.id}`} >                   
                     <h3>{room.room_name}</h3>
                 </Link>
-                <button onClick={(() => {props.deleteRoom(room.id)})}>Delete this Room</button>
+                <button className="button" onClick={(() => {props.deleteRoom(room.id)})}>Delete this Room</button>
             </div>
             
         ))

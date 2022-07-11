@@ -28,9 +28,9 @@ class PlansForm extends Component {
     console.log("in plan form")
  //debugger;
     return <form onSubmit={(e) => this.handleOnSubmit(e)}>
-        <label><b>Let's add a Plan: </b>
+        <label><b>---Add a New Plan for the Selected Room---</b>
             <input type='text' onChange={ (e) => this.handleChange(e)} />
-            <input type='submit' value='Add Plan' />
+            <input type='submit' className='button' value='Add New Plan' />
         </label>
     </form>;
   }

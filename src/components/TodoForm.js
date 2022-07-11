@@ -27,7 +27,7 @@ class TodoForm extends Component {
     return <div>
         <form onSubmit={(e) => this.handleOnSubmit(e)}>
             <input type='text' placeholder='Add new todo' onChange={ (e) => this.handleChange(e)} />
-            <input type='submit' value='Add' />
+            <input type='submit' className='button' value='Add to Checklist' />
         </form>
     </div>;
   }
