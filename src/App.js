@@ -5,6 +5,7 @@ import RoomsContainer from './containers/RoomsContainer';
 import RoomContainer from './containers/RoomContainer';
 import Home from './components/Home.js';
 import NavBar from './components/NavBar.js';
+import NewForm from './components/NewForm.js'
 //import AppBar  from './components/AppBar.js';
 //import { useState, useEffect } from "react";
 
@@ -16,6 +17,7 @@ import NavBar from './components/NavBar.js';
         <Router>
           <div className="App">
             <NavBar />
+            <NewForm />
             <div className='center-card'>
             <Switch>
               <Route exact path="/" component={Home} />
