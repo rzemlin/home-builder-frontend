@@ -6,15 +6,16 @@ class RoomsForm extends Component {
       super(props)
     
       this.state = {
-         room: ''
+         room: ""
+         //room_name: ''
       }
     }
 //make a controlled form
  handleChange(e){
         this.setState({
-            room: e.target.value
+            value: e.target.value
         })
-        console.log(this.state.room)
+       // console.log(this.state.room)
     }
 
     handleOnSubmit = (e) => {
@@ -27,7 +28,7 @@ class RoomsForm extends Component {
   render() {
     console.log("in rooms form")
     return <form onSubmit={(e) => this.handleOnSubmit(e)}>
-        <label><b>Add a New Room Checklist: </b>
+        <label><b>Add a New Room: </b>
             <input type='text' onChange= {this.handleChange} />
             <input type='submit' className='button' value='Create It' />
         </label>

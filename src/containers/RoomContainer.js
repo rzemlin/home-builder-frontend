@@ -4,6 +4,7 @@ import RoomShowPage from '../components/RoomShowPage';
 import { getRoom, addPlan, addTodo } from '../actions/roomActions';
 import PlansForm from '../components/PlansForm';
 import PlansIndex from '../components/PlansIndex';
+import NewPlansFCForm from '../components/NewPlansFCForm';
 
 class RoomContainer extends Component {
 
@@ -19,6 +20,7 @@ class RoomContainer extends Component {
             <RoomShowPage chosenRoom={this.props.chosenRoom} addTodo={this.props.addTodo}/>
             <PlansIndex room={this.props.chosenRoom} plans={this.props.plans} addTodo={this.props.addTodo} />
             <PlansForm addPlan={this.props.addPlan} chosenRoom={this.props.chosenRoom}/>
+            <NewPlansFCForm addPlan={this.props.addPlan} chosenRoon={this.props.chosenRoom}/>
         </div>
     }
 }
